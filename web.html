@@ -1,0 +1,536 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FAST NUCES | Official Website</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #111;
+    color: #fff;
+}
+
+/* HEADER */
+
+header {
+    background: #000;
+    color: white;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 4px solid #e31e24;
+}
+
+header h2 {
+    font-size: 27px;
+}
+
+header h2 span {
+    color: #e31e24;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px 13px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #e31e24;
+}
+
+/* HERO SECTION */
+
+.hero {
+    background:
+    linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.82)),
+    url("https://commons.wikimedia.org/wiki/Special:FilePath/FAST_NUCES_KHI_CAMPUS_2.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    min-height: 520px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 70px 20px;
+}
+
+.hero h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.hero h1 span {
+    color: #e31e24;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* BUTTONS */
+
+button {
+    background: #d71920;
+    color: white;
+    border: 2px solid #d71920;
+    padding: 13px 27px;
+    margin: 8px;
+    border-radius: 4px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: black;
+    border-color: #e31e24;
+    transform: translateY(-4px);
+}
+
+/* GENERAL SECTIONS */
+
+section {
+    padding: 65px 7%;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 30px;
+    color: white;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+section h2 span {
+    color: #e31e24;
+}
+
+.heading-line {
+    width: 65px;
+    height: 4px;
+    background: #e31e24;
+    margin: 0 auto 30px;
+}
+
+/* ABOUT */
+
+.about {
+    background: #151515;
+}
+
+.about p {
+    max-width: 850px;
+    margin: auto;
+    font-size: 17px;
+    line-height: 1.9;
+    color: #ccc;
+}
+
+/* COURSES */
+
+#courses {
+    background: #080808;
+}
+
+.courses {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.card {
+    background: #1b1b1b;
+    width: 280px;
+    padding: 30px 20px;
+    border-radius: 6px;
+    border-bottom: 4px solid #e31e24;
+    box-shadow: 0 3px 15px rgba(255,0,0,0.12);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(227,30,36,0.3);
+}
+
+.card h3 {
+    color: #e31e24;
+    margin-bottom: 18px;
+    font-size: 21px;
+}
+
+.card p {
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* LOGIN */
+
+#loginBox {
+    display: none;
+    background: #1b1b1b;
+    padding: 30px;
+    width: 320px;
+    max-width: 90%;
+    margin: 30px auto;
+    box-shadow: 0 3px 20px rgba(227,30,36,0.2);
+    border-top: 5px solid #e31e24;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#loginBox h2 {
+    color: #e31e24;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 13px;
+    margin: 10px 0;
+    background: #080808;
+    color: white;
+    border: 1px solid #555;
+    border-radius: 4px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #e31e24;
+}
+
+/* CONTACT */
+
+.contact {
+    background: #151515;
+}
+
+.contact p {
+    margin: 15px;
+    font-size: 17px;
+    color: #ddd;
+}
+
+/* FOOTER */
+
+footer {
+    background: #000;
+    color: white;
+    padding: 30px 15px;
+    text-align: center;
+    border-top: 4px solid #e31e24;
+}
+
+footer p {
+    margin: 10px;
+}
+
+footer a {
+    color: #e31e24;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: white;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media(max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    nav a {
+        margin: 8px;
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    section {
+        padding: 45px 5%;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+    <h2>
+        <a href="https://www.nu.edu.pk/">
+            FAST <span>UNIVERSITY</span>
+        </a>
+    </h2>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#courses">Academics</a>
+        <a href="#contact">Contact</a>
+        <a href="#" onclick="showLogin(); return false;">Login</a>
+    </nav>
+
+</header>
+
+<!-- HERO SECTION -->
+
+<div class="hero" id="home">
+
+    <h1>Welcome to <span>FAST NUCES</span></h1>
+
+    <p>Building Future Leaders Through Quality Education</p>
+
+    <div>
+        <button onclick="showLogin()">Student Login</button>
+
+        <button onclick="goCourses()">Explore Programs</button>
+    </div>
+
+</div>
+
+<!-- LOGIN -->
+
+<div id="loginBox">
+
+    <h2>Student Login</h2>
+
+    <input type="text" id="username"
+    placeholder="Enter Your Username">
+
+    <input type="password" id="password"
+    placeholder="Enter Your Password">
+
+    <button onclick="login()">Login</button>
+
+    <button onclick="closeLogin()">Close</button>
+
+</div>
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+    <h2>About <span>FAST University</span></h2>
+
+    <div class="heading-line"></div>
+
+    <p>
+        FAST National University of Computer and Emerging
+        Sciences is committed to providing quality higher
+        education and developing innovative professionals.
+
+        Our university focuses on academic excellence,
+        research, modern technology and professional
+        development to prepare students for future challenges.
+    </p>
+
+</section>
+
+<!-- COURSES -->
+
+<section id="courses">
+
+    <h2>Academic <span>Programs</span></h2>
+
+    <div class="heading-line"></div>
+
+    <div class="courses">
+
+        <div class="card">
+
+            <h3>Computer Science</h3>
+
+            <p>
+                Develop programming, problem-solving
+                and software development skills.
+            </p>
+
+            <button onclick="courseInfo('Computer Science')">
+                View Details
+            </button>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Business Administration</h3>
+
+            <p>
+                Learn business management,
+                leadership and professional skills.
+            </p>
+
+            <button onclick="courseInfo('Business Administration')">
+                View Details
+            </button>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Information Technology</h3>
+
+            <p>
+                Explore modern technologies,
+                computer networks and IT systems.
+            </p>
+
+            <button onclick="courseInfo('Information Technology')">
+                View Details
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+    <h2>Contact <span>Us</span></h2>
+
+    <div class="heading-line"></div>
+
+    <p>Email: info@nu.edu.pk</p>
+
+    <p>Phone: Contact your campus for official details</p>
+
+    <button onclick="contactMessage()">
+        Contact Now
+    </button>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>© 2026 FAST NUCES | All Rights Reserved</p>
+
+    <p>
+        <a href="https://www.nu.edu.pk/" target="_blank">
+            Visit Official FAST Website
+        </a>
+    </p>
+
+</footer>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+function showLogin() {
+
+    document.getElementById("loginBox").style.display = "block";
+
+    document.getElementById("loginBox").scrollIntoView({
+        behavior: "smooth"
+    });
+
+}
+
+function closeLogin() {
+
+    document.getElementById("loginBox").style.display = "none";
+
+}
+
+function login() {
+
+    var user = document.getElementById("username").value;
+    var pass = document.getElementById("password").value;
+
+    if (user == "" || pass == "") {
+
+        alert("Please enter username and password");
+
+    }
+
+    else {
+
+        alert("Demo Login Successful! Welcome " + user);
+
+    }
+
+}
+
+function goCourses() {
+
+    document.getElementById("courses").scrollIntoView({
+        behavior: "smooth"
+    });
+
+}
+
+function courseInfo(name) {
+
+    alert("You selected: " + name);
+
+}
+
+function contactMessage() {
+
+    alert("Thank you for contacting FAST University!");
+
+}
+
+</script>
+
+</body>
+</html>
